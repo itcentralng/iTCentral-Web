@@ -105,7 +105,7 @@ function Navbar() {
                 offset={-50}
                 duration={500}
               >
-                <span className="hover-line"></span>Apply
+                <span className="hover-line"></span>Join Us
               </Link>
             </li>
             <li className="nav--item">

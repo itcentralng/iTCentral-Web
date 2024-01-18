@@ -69,16 +69,25 @@ function Explore() {
     <div id='Explore'>
       <div className="container">
         <>
-          <h2>Explore What We Offer</h2>
+          <h2>What We Offer</h2>
         </>
           <div className='cards'>
             {ExploreData}
           </div>
             <div id = 'left' onClick = {() =>scroll("left")}><i className="fa fa-arrow-left" style = {{fontSize:"1.8rem", opacity: '0.5'}}></i></div>
             <div onClick = {() => scroll("right")} id = 'right'><i className="fa fa-arrow-right" style = {{fontSize:"1.8rem", opacity: '0.5'}}></i></div>
+        <div>
+          <div className="specialization">
+          <h2>Our Activities</h2>
+          <p>Training young Interns from Northern Nigeria to the next generation of technology,
+              skills development,  and providing invaluable experiences within a supportive community </p>
+              </div>
+        {/* </div>
+        <div className="specialization"> */}
         <div className="specialization">
           <h2>Our Promise</h2>
           <p>We are commitmented is to relentlessly support, nurture, and empower Northern Nigeria's tech community. We pledge to provide unwavering guidance, resources, and opportunities, fostering an environment where innovation thrives, talents flourish, and impactful ventures emerge. Our dedication lies in creating a lasting legacy of technological advancement, economic growth, and global recognition for Northern Nigeria's vibrant tech landscape.</p>
+        </div>
         </div>
       {/* <div className="advert">
       </div> */}
