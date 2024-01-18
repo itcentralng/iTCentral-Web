@@ -124,13 +124,24 @@
     #right,#left{
         top: 30%;
     }
-    .specialization{
+
+    /* .specializations {
         display: flex;
         flex-direction: column;
         text-align: center;
+    } */
+
+    .specialization{
+        display: inline-block;
+        margin: 50px 0;
     }
     .specialization h2{
         font-size: 2.2rem;
+    }
+
+    .specialization h2{
+        flex: 1;
+        font-size: 2rem;
     }
 
     
