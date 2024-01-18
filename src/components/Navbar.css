@@ -9,6 +9,7 @@
     background-color: white;
     width: 100vw;
     box-sizing: border-box;
+    /* box-shadow: #000000; */
 }
 
 .navbar .container{
@@ -38,9 +39,24 @@
     color: #000000;
     text-align: center;
     font-weight: 400;
+    position: relative;
     transition: all ease-out .2s ;
-
 }
+
+.hover-line {
+    width: 0%;
+    height: 2px;
+    background: #0070C0;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: all ease-out .2s ;
+}
+
+.nav--item a:hover .hover-line {
+    width: 100%;
+}
+
 .hamburger{
     display: none;
     cursor: pointer;

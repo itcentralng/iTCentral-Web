@@ -91,11 +91,11 @@ function Navbar() {
           <ul>
             <li className="nav--item">
               <Link to="/" smooth={true} offset={-50} duration={500}>
-                Home
+              <span className="hover-line"></span>Home
               </Link>
             </li>
             <li className="nav--item">
-              <Link to="/about">About Us</Link>
+              <Link to="/about"><span className="hover-line"></span>About Us</Link>
             </li>
             <li className="nav--item">
               <Link
@@ -105,7 +105,7 @@ function Navbar() {
                 offset={-50}
                 duration={500}
               >
-                Apply
+                <span className="hover-line"></span>Apply
               </Link>
             </li>
             <li className="nav--item">
@@ -115,12 +115,12 @@ function Navbar() {
                 offset={-50}
                 duration={500}
               >
-                Presentations
+                <span className="hover-line"></span>Presentations
               </Link>
             </li>
             <li className="nav--item">
               <Link to="/contactus" smooth={true} offset={-50} duration={500}>
-                Contact
+              <span className="hover-line"></span>Contact
               </Link>
             </li>
           </ul>
