@@ -16,8 +16,6 @@ const useStyles = makeStyles((theme)=>{
             position: 'relative',
             borderRadius: '1rem',
 
-
-
             
         },
         formsCover:{

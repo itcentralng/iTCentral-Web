@@ -5,6 +5,7 @@ import Explore from "../components/Explore";
 import HeroSection from "../components/HeroSection";
 import Startup from "../components/Startup";
 import SummerSection from "../components/SummerSection";
+import Swipers from "../components/swiper/Swipers";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <Explore />
       <Startup />
       <Advert />
+      <Swipers />
       {/* <SummerSection /> */}
     </>
   );
