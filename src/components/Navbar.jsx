@@ -1,10 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../components/Navbar.css";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Router } from "react-router-dom";
 import { Twirl as Hamburger } from "hamburger-react";
+
+import CSSRulePlugin from 'gsap/CSSRulePlugin'
+import { TimelineLite, Power2 } from 'gsap'
+
+
 function Navbar() {
+
+let imageReveal = CSSRulePlugin.getRule('.logo::after')
+let linkReveal = CSSRulePlugin.getRule('.nav--item a::after')
+
+
+let tl = new TimelineLite()
+
+
+useEffect(() => {
+  tl.to(imageReveal, 1.4, {width: "0%", ease: Power2.easeInOut});
+  tl.to(linkReveal, 1.4, {width: "0%", ease: Power2.easeInOut})
+})
+
+
   const [hamburgerState, setHamburgerState] = useState(false);
   function handleClick(event) {
     event.stopPropagation();

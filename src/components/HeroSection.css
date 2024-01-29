@@ -1,5 +1,5 @@
 #hero--container{
-    background-color: #0070C00D;
+    background-color: #f4fbff;
     width: 100vw;
     height: 80rem;
     display: flex;
@@ -17,6 +17,7 @@
     flex-direction: row;
     padding-bottom: 4rem;
     padding-top: 9rem;
+    /* visibility: hidden; */
 }
 
 
@@ -28,8 +29,21 @@
     display: flex;
     justify-content: flex-end;
     flex: 1;
+    position: relative;
 }
-.hero--image img{
+.hero--image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: #dee4e7;
+    /* background: url('./public/logo.png') center/cover no-repeat, rgb(51, 126, 204); */
+    /* visibility: hidden; */
+}
+.hero--image .image{
     width: 50rem;
     object-fit: cover;
     object-position: center;
@@ -49,13 +63,22 @@
     font-size: 1.8rem;
     margin-bottom: 5rem !important;
 }
+
+.btn {
+    background: red;
+}
 @media only screen and (min-width: 0) and (max-width:768px){
-    #hero--container{
+    #hero--container .container{
         height: 50rem;
+        width: 100vw;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     }
-    #hero--container h6{
+    /* #hero--container h6{
         display: none;
-    }
+    } */
     #hero--container h2{
         font-size: 2.3rem;
         font-weight: 400;
@@ -70,14 +93,22 @@
         margin: 5rem 0rem;
     }
     .hero--image{
-        display: none;
+        width: 2rem;
+        /* display: none; */
     }
     
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {     #hero--container .container{
+@media only screen and (min-width: 768px) and (max-width: 1024px) {    
+     #hero--container .container{
         height: auto;
         flex-direction: column-reverse;
+        background-color: #0070C00D;
+    width: 100vw;
+    height: 80rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     }
     #hero--container{
         /* margin: 0rem 0rem 0rem 0rem; */
@@ -85,7 +116,7 @@
         height: auto;
     }
     #hero--container h6{
-        display: none;
+        display: block;
     }
     #hero--container h2{
         font-size: 4rem;
@@ -94,7 +125,9 @@
         font-size: 2rem;
     }
     .hero--image {
-        display: none;
+        /* display: block; */
+        width: 3rem;
+        /* display: none; */
     }
 
     
