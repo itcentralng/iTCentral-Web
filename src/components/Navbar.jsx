@@ -90,6 +90,7 @@ useEffect(() => {
     };
   }, []);
   return (
+    <div className="wrapper">
     <div className="navbar" style={{ boxShadow }}>
       <div className="container">
         <div className="logo">
@@ -145,6 +146,7 @@ useEffect(() => {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 }
