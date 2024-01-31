@@ -12,7 +12,7 @@ function Button(props) {
   let tl = new TimelineLite();
 
 useEffect(() => {
-  tl.to(buttonReveal, 1.4, {width: "0%", ease: Power2.easeInOut})
+  tl.to(buttonReveal, 1.4, {width: "0%", borderTopLeftRadius: "20px", borderBottomLeftRadius: "20px", ease: Power2.easeInOut})
 })
 
   return (

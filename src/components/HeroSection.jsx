@@ -12,15 +12,17 @@ function HeroSection() {
   let container = useRef(null)
   // let image = useRef(null)
   let imageReveal = CSSRulePlugin.getRule('.hero--image::after')
-  let image = CSSRulePlugin.getRule('.image')
+  let headingReveal = CSSRulePlugin.getRule('#hero--container h2::after')
+  let image = CSSRulePlugin.getRule('.hero--image .image')
 
   let tl = new TimelineLite()
 
 
   useEffect(() => {
-    tl.to(imageReveal, 1.4, {width: "0%", ease: Power2.easeInOut})
+    tl.to(headingReveal, 1.4, {height: "0%", ease: Power2.easeInOut})
+    .to(imageReveal, 1.4, {width: "0%", ease: Power2.easeInOut, delay: -1.6 })
+    .from(image, 1.4, { scale: 1.6, ease: Power2.easeInOut})
     .to(container, 1, { visibility: "visible" })
-    .to(image, 1.4, { scale: 1.6, ease: Power2.easeInOut, delay: -1.6 })
   })
 
   return (
@@ -33,7 +35,7 @@ function HeroSection() {
           <Button text = "Explore" link = "Explore" style = 'button-blue' />
         </div>
         <div className="hero--image">
-            <img src="./Images/hero-3.svg" alt="" className='image' />
+            <img ref={el => (image = el)} src="./Images/hero-3.svg" alt="" className='image' />
         </div>
       </div>
       

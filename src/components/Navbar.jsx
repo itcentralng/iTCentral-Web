@@ -20,7 +20,7 @@ let tl = new TimelineLite()
 
 useEffect(() => {
   tl.to(imageReveal, 1.4, {width: "0%", ease: Power2.easeInOut});
-  tl.to(linkReveal, 1.4, {width: "0%", ease: Power2.easeInOut})
+  tl.to(linkReveal, 1.4, {width: "0%", ease: Power2.easeInOut, delay: -1.6 })
 })
 
 
